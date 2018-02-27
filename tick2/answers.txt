@@ -1,0 +1,60 @@
+1.
+public long getPos(col,row){
+	return row*8 + col;
+}
+
+2.
+public long getCol(i){
+	return (i%8);
+}
+
+3.
+public long getRow(i) {
+	return (i/8)
+}
+
+4.
+
+PackedLong.get(0x2623321111233262L, 6);
+returns true.
+
+value held at position 6 is 1.
+
+5.
+
+PackedLong.get(0x2623321111233262L, getPos(4,2));
+returns false.
+
+value at position (4,2) is 0.
+
+6.
+
+World                 Col   Row     result
+0x20A0600000000000L   6      6        5
+0x20A0600000000000L   6      4        2
+0x20A0600000000000L   4      6        3
+0x20A0600000000000L   4      4        1
+0x20A0600000000000L   2      2        0
+
+7.
+
+It returned the correct values.
+
+8.
+
+World                 Col   Row     result
+0x20A0600000000000L   6      6      FALSE
+0x20A0600000000000L   6      4      FALSE
+0x20A0600000000000L   4      6      TRUE
+0x20A0600000000000L   7      6      FALSE
+0x20A0600000000000L   5      6      TRUE
+0x20A0600000000000L   1      1      FALSE
+0x20A0600000000000L   5      4      FALSE
+0x20A0600000000000L   6      5      TRUE
+
+9.
+
+It returned the correct next states.
+
+
+

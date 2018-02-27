@@ -1,0 +1,57 @@
+1.
+
+class PrimitiveInt {
+ public static void main(String[] args) {
+  int a;                 //create a variable called a
+  int b;                 //create a variable called b
+  a = 1;
+  b = 2;
+  a = b;                 //update a with the value b
+  System.out.println(a=b); //print out the current value of a
+ }
+}
+
+this prints 2, showing a=b returns b
+
+2.
+
+It binds the variable j to 10 and then prints out j and reduces it by 1. It then prints out the new value of j.
+
+3. it prints out --j (9) twice because it takes 1 off j before printing the first time and then just prints the new value of j the next time.
+
+4.
+
+class PrimitiveInt {
+ public static void main(String[] args) {
+  int x = 1;
+  int y = 1;
+  boolean found = false;
+  boolean found2 = false;
+  while (!found){
+  	if (0x55 >> x == 5){
+  		System.out.println(x);
+  		found = true;
+  	}
+  	  x += 1;
+  }
+  while (!found2){
+  	  if (0x55 << y == 10880){ 
+  		System.out.println(y);
+  		found2 = true;
+  	  }
+  	  y += 1;
+  }
+
+ }
+}
+
+5.
+
+The bit that is n from the least most significant bit represents 2^n. 1<<n moves the 1 to the left n times and hence makes 2^n as all other bits are 0.
+
+6.
+
+public int fifthbitset(x){
+	return (x>>4) & 1;
+}
+
